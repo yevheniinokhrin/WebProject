@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Set;
 
@@ -21,6 +22,6 @@ public class Purchase {
     @ManyToMany(fetch = FetchType.LAZY)
     private Set<Product> products;
     private int totalPrice;
-    private Date date;
+    private LocalDateTime date;
 
 }
